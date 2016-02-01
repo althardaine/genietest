@@ -99,7 +99,7 @@ public class Main {
 			frame.getContentPane().add(checkBox);
 		}
 		
-		i = 0;
+		i = 4;
 		for(String feature : features) {
 			JLabel label = new JLabel(feature);
 			label.setBounds(120, i, 100, 14);
@@ -116,7 +116,7 @@ public class Main {
 	}
 	
 	private void showResults(HashMap<String, Double> results) {
-		int i = 0;
+		int i = 4;
 		for(String feature : features) {
 			JProgressBar bar = new JProgressBar();
 			bar.setBounds(240, i, 100, 14);
