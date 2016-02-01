@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Otwarty">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Cierpliwy">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Szczery">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="TypRealistyczny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Cierpliwy Szczery</parents>
+			<probabilities>0.97 0.03000000000000003 0.87 0.13 0.1 0.9 0.09 0.91</probabilities>
+		</cpt>
+		<cpt id="TypSpoleczny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Szczery Otwarty</parents>
+			<probabilities>0.9 0.09999999999999998 0.4 0.6 0.55 0.45 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Spostrzegawczy">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Dokladny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="TypBadawczy">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Spostrzegawczy Dokladny</parents>
+			<probabilities>0.88 0.12 0.67 0.33 0.4 0.6 0.001 0.999</probabilities>
+		</cpt>
+		<cpt id="Ambitny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Impulsywny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="TypPrzedsiebiorczy">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Otwarty Ambitny Impulsywny</parents>
+			<probabilities>0.97 0.03000000000000003 0.86 0.14 0.4 0.6 0.2 0.8 0.6 0.4 0.2 0.8 0.1 0.9 0 1</probabilities>
+		</cpt>
+		<cpt id="TypKonwencjonalny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Cierpliwy Dokladny</parents>
+			<probabilities>0.86 0.14 0.7 0.3 0.1 0.9 0.004 0.996</probabilities>
+		</cpt>
+		<cpt id="TypArtystyczny">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>Otwarty Spostrzegawczy Ambitny Impulsywny</parents>
+			<probabilities>1 0 0.99 0.01000000000000001 0.96 0.04000000000000004 0.91 0.08999999999999997 0.95 0.05000000000000004 0.9300000000000001 0.06999999999999995 0.88 0.12 0.78 0.22 0.67 0.33 0.61 0.39 0.2 0.8 0.14 0.86 0.12 0.88 0.11 0.89 0.08 0.92 0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="Mechanik">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypRealistyczny TypKonwencjonalny</parents>
+			<probabilities>0.98 0.02000000000000002 0.8100000000000001 0.19 0.6 0.4 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Architekt">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypArtystyczny TypBadawczy</parents>
+			<probabilities>0.8100000000000001 0.19 0.8 0.2 0.34 0.6599999999999999 0.04 0.96</probabilities>
+		</cpt>
+		<cpt id="Informatyk">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypBadawczy TypKonwencjonalny</parents>
+			<probabilities>0.999 0.001000000000000001 0.4 0.6 0.59 0.41 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Sprzedawca">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypPrzedsiebiorczy TypKonwencjonalny</parents>
+			<probabilities>0.7 0.3 0.5 0.5 0.9 0.09999999999999998 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Kierowca">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypRealistyczny TypPrzedsiebiorczy</parents>
+			<probabilities>0.91 0.08999999999999997 0.65 0.35 0.7 0.3 0.13 0.87</probabilities>
+		</cpt>
+		<cpt id="Nauczyciel">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypSpoleczny TypKonwencjonalny</parents>
+			<probabilities>0.98 0.02000000000000002 0.91 0.08999999999999997 0.4 0.6 0.09 0.91</probabilities>
+		</cpt>
+		<cpt id="Kucharz">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypBadawczy TypArtystyczny</parents>
+			<probabilities>0.6 0.4 0.31 0.69 0.25 0.75 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Rolnik">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypRealistyczny TypPrzedsiebiorczy</parents>
+			<probabilities>0.95 0.05000000000000004 0.85 0.15 0.21 0.79 0.09 0.91</probabilities>
+		</cpt>
+		<cpt id="Lekarz">
+			<state id="Tak" />
+			<state id="Nie" />
+			<parents>TypSpoleczny TypBadawczy</parents>
+			<probabilities>0.7 0.3 0.65 0.35 0.1 0.9 0.02 0.98</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network1" faultnameformat="nodestate">
+			<node id="TypRealistyczny">
+				<name>TypRealistyczny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>99 284 312 361</position>
+			</node>
+			<node id="TypSpoleczny">
+				<name>TypSpoleczny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>444 277 657 354</position>
+			</node>
+			<node id="TypBadawczy">
+				<name>TypBadawczy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1465 281 1678 358</position>
+			</node>
+			<node id="TypPrzedsiebiorczy">
+				<name>TypPrzedsiebiorczy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>806 278 1019 355</position>
+			</node>
+			<node id="TypKonwencjonalny">
+				<name>TypKonwencjonalny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1136 279 1349 356</position>
+			</node>
+			<node id="TypArtystyczny">
+				<name>TypArtystyczny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1805 288 2018 365</position>
+			</node>
+			<node id="Mechanik">
+				<name>Mechanik</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>503 700 716 777</position>
+			</node>
+			<node id="Architekt">
+				<name>Architekt</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2058 740 2271 817</position>
+			</node>
+			<node id="Cierpliwy">
+				<name>Cierpliwy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>361 25 574 102</position>
+			</node>
+			<node id="Otwarty">
+				<name>Otwarty</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>664 25 877 102</position>
+			</node>
+			<node id="Szczery">
+				<name>Szczery</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>57 29 270 106</position>
+			</node>
+			<node id="Informatyk">
+				<name>Informatyk</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1270 723 1483 800</position>
+			</node>
+			<node id="Sprzedawca">
+				<name>Sprzedawca</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1021 713 1234 790</position>
+			</node>
+			<node id="Kierowca">
+				<name>Kierowca</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>252 703 465 780</position>
+			</node>
+			<node id="Nauczyciel">
+				<name>Nauczyciel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1540 724 1753 801</position>
+			</node>
+			<node id="Kucharz">
+				<name>Kucharz</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1813 725 2026 802</position>
+			</node>
+			<node id="Rolnik">
+				<name>Rolnik</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>10 698 223 775</position>
+			</node>
+			<node id="Lekarz">
+				<name>Lekarz</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>757 703 970 780</position>
+			</node>
+			<node id="Spostrzegawczy">
+				<name>Spostrzegawczy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1805 13 2018 90</position>
+			</node>
+			<node id="Dokladny">
+				<name>Dokladny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1528 12 1741 89</position>
+			</node>
+			<node id="Ambitny">
+				<name>Ambitny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>989 17 1202 94</position>
+			</node>
+			<node id="Impulsywny">
+				<name>Impulsywny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1268 28 1481 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
